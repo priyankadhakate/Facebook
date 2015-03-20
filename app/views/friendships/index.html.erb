@@ -10,7 +10,7 @@
 <% friendship = Friendship.check_friendship(user.id, current_user.id) %>
 <% if friendship.present?%>
 <% if friendship.friend_id == current_user.id && friendship.status == "pending" %>
-<%= link_to "Accept", accepted_friends_friendship_path(friendship), :metpiuehod => :put %>
+<%= link_to "Accept", accepted_friends_friendship_path(friendship), :method => :put %>
 <%= link_to "reject", rejected_friends_friendship_path(friendship), :method => :put %>
 <% elsif friendship.status == "accepted" %>
 <b>Friendship</b>
